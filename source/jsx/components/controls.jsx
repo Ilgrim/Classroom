@@ -135,6 +135,9 @@ define([
 
                 if(this.props.state.room.status === Constants.RoomState.CONNECTED && user.stream != null) {
                     res.push(
+                        <div class="center">
+                    );
+                    res.push(
                         <button id="videoMute" onClick={this.handleVideoMute} className={user.videoMute ? '' : 'on'} title="Mute/Unmute Video"></button>
                         );
 
@@ -145,6 +148,9 @@ define([
                     res.push(
                         <button id="roomLock" onClick={this.handleRoomLock} className={this.props.state.room.isLocked ? '' : 'on'} title="Lock/Unlock Room"></button>
                         );
+                            res.push(
+                            </div>
+                                );
 
                 }
             }
