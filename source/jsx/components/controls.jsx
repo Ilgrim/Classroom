@@ -87,8 +87,14 @@ define([
             var user = this.props.state.users.filter(function (user) {
                 return user.id === 0;
             })[0];
-            
+
             if(this.props.state.state === Constants.AppState.FOYER) {
+                res.push(
+                    <button className="joinRoom mainControl" onClick={this.handleStartRoom}>
+                        Start a new classroom
+                    </button>
+                    );
+
                 res.push(
                     <div className="description">
                         <p>
