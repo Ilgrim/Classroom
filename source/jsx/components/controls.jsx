@@ -94,20 +94,9 @@ define([
                         Start a new classroom
                     </button>
                     );
-
-                res.push(
-                    <div className="description">
-                        <p>
-                            Start a classroom<br />with up to {Configs.maxUsers} people
-                        </p>
-                        <p>
-                            Just enter a classroom name and hit the &quot;Start a new classroom&quot; button below then share the link.<br /><br />
-                        </p>
-                    </div>
-                );
+                
 	                res.push(
                     <div className="link">
-                        <p>Room Name</p>
                         <input name="roomName" id="roomName" type="text" placeholder="Enter Your Room Name Here." />
                     </div>
                     );
