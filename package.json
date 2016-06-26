@@ -1,20 +1,20 @@
 {
-  "name": "getaroomio",
-  "description": "FREE and hassle free audio/video real-time chat for desktop and mobile.",
-  "version": "0.3.1",
-  "homepage": "http://github.com/serrynaimo/getaroom",
+  "name": "classroom",
+  "description": "audio/video real-time chat for desktop and mobile.",
+  "version": "0.0.1",
+  "homepage": "http://github.com/wallermadev/Classroom",
   "author": {
-    "name": "Thomas Gorissen",
-    "email": "mail@serrynaimo.com"
+    "name": "wallermadev",
+    "email": "wallermadev@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/serrynaimo/getaroom.git"
+    "url": "git@github.com/wallermadev/Classroom.git"
   },
   "licenses": [
     {
       "type": "All rights reserved",
-      "url": "http://github.com/serrynaimo/getaroom"
+      "url": "http://github.com/wallermadev/Classroom"
     }
   ],
   "scripts": {
