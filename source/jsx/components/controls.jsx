@@ -28,15 +28,17 @@ define([
         },
         handleStartRoom: function() {
             var room = this.props.state.room.useMCU ? 'm' : '';
-            room = room + Utils.uuid(6);
+
 
             var selectedRoomName = document.getElementById('roomName').value;
 	        if(selectedRoomName !== "" && selectedRoomName !== "Enter Your Room Name Here."){
                 room = selectedRoomName;
-                Router.setRoute('/' + room.replace(/ /g,''))
             }else{
-                alert("You must enter a room name to continue.");
+                alert("You have not entered a room name a random one will be created for you.");
+                room = room + Utils.uuid(6);
             }
+            Router.setRoute('/' + room.replace(/ /g,''))
+
         },
         handleLeaveRoom: function() {
             Skylink.leaveRoom();
