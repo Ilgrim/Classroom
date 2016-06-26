@@ -134,24 +134,14 @@ define([
                     );
 
                 if(this.props.state.room.status === Constants.RoomState.CONNECTED && user.stream != null) {
+
                     res.push(
                         <div class="center">
+                          <button id="videoMute" onClick={this.handleVideoMute} className={user.videoMute ? '' : 'on'} title="Mute/Unmute Video"></button>
+                          <button id="audioMute" onClick={this.handleAudioMute} className={user.audioMute ? '' : 'on'} title="Mute/Unmute Audio"></button>
+                          <button id="roomLock" onClick={this.handleRoomLock} className={this.props.state.room.isLocked ? '' : 'on'} title="Lock/Unlock Room"></button>
+                        </div>
                     );
-                    res.push(
-                        <button id="videoMute" onClick={this.handleVideoMute} className={user.videoMute ? '' : 'on'} title="Mute/Unmute Video"></button>
-                        );
-
-                    res.push(
-                        <button id="audioMute" onClick={this.handleAudioMute} className={user.audioMute ? '' : 'on'} title="Mute/Unmute Audio"></button>
-                        );
-
-                    res.push(
-                        <button id="roomLock" onClick={this.handleRoomLock} className={this.props.state.room.isLocked ? '' : 'on'} title="Lock/Unlock Room"></button>
-                        );
-                            res.push(
-                            </div>
-                                );
-
                 }
             }
 
