@@ -87,25 +87,15 @@ define([
             var user = this.props.state.users.filter(function (user) {
                 return user.id === 0;
             })[0];
-
-           res.push(
-                <div className="logo">Class Room</div>
-                );
-
+            
             if(this.props.state.state === Constants.AppState.FOYER) {
-                res.push(
-                    <button className="joinRoom mainControl" onClick={this.handleStartRoom}>
-                        Start a new classroom
-                    </button>
-                    );
-
                 res.push(
                     <div className="description">
                         <p>
-                            Start a FREE classroom<br />with up to {Configs.maxUsers} people
+                            Start a classroom<br />with up to {Configs.maxUsers} people
                         </p>
                         <p>
-                            Just hit the &quot;Start a new classroom&quot; button below and share the link.<br /><br />
+                            Just enter a classroom name and hit the &quot;Start a new classroom&quot; button below then share the link.<br /><br />
                         </p>
                     </div>
                 );
