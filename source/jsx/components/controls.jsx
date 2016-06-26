@@ -88,6 +88,10 @@ define([
                 return user.id === 0;
             })[0];
 
+           res.push(
+                <div className="logo">Class Room</div>
+                );
+
             if(this.props.state.state === Constants.AppState.FOYER) {
                 res.push(
                     <button className="joinRoom mainControl" onClick={this.handleStartRoom}>
@@ -99,13 +103,12 @@ define([
                     <div className="description">
                         <p>
                             Just enter a classroom name and hit the &quot;Start a new classroom&quot; button below then share the link.<br /><br />
-                            <br />
-                            Start a classroom ith up to {Configs.maxUsers} people
                         </p>
                     </div>
                 );
 	                res.push(
                     <div className="link">
+                        <p>Room Name</p>
                         <input name="roomName" id="roomName" type="text" placeholder="Enter Your Room Name Here." />
                     </div>
                     );
