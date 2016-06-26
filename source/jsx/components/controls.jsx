@@ -102,7 +102,7 @@ define([
                 res.push(
                     <div className="description">
                         <p>
-                            Just enter a classroom name and hit the &quot;Start a new classroom&quot;<br /><br />
+                            Just enter a classroom name and hit &quot;Start a new classroom&quot;<br /><br />
                         </p>
                     </div>
                 );
