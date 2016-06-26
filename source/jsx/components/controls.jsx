@@ -29,7 +29,13 @@ define([
         handleStartRoom: function() {
             var room = this.props.state.room.useMCU ? 'm' : '';
             room = room + Utils.uuid(6);
-            Router.setRoute('/' + room);
+
+            var selectedRoomName = document.getElementById('roomName').value;
+	    if(selectedRoomName !== null || selectedRoomName !== undefined || selectedRoomName !== ""){
+                room = selectedRoomName;
+            }
+
+            Router.setRoute('/' + room.replace(/ /g,''));
         },
         handleLeaveRoom: function() {
             Skylink.leaveRoom();
@@ -102,13 +108,13 @@ define([
                             Just hit the &quot;Start a new classroom&quot; button below and share the link.<br /><br />
                         </p>
                     </div>
+                );
+	                res.push(
+                    <div className="link">
+                        <p>Room Name</p>
+                        <input name="roomName" id="roomName" type="text" placeholder="Enter Your Room Name Here." />
+                    </div>
                     );
-
-                //res.push(
-                //    <div className="link">
-                //        <input type="checkbox" id="mcu" name="mcu" onClick={this.handleMCUClick} /> <label for="mcu">Use Skylink Media Relay</label>
-                //    </div>
-                //    );
             }
             else if(this.props.state.state === Constants.AppState.IN_ROOM) {
                 res.push(

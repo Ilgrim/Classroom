@@ -23,7 +23,7 @@ define([
                 </section>
                 )
         }
-    })
+    });
 
     var UserAreaList = React.createClass({
         render: function() {

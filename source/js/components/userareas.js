@@ -23,7 +23,7 @@ define([
                 )
                 )
         }
-    })
+    });
 
     var UserAreaList = React.createClass({displayName: 'UserAreaList',
         render: function() {

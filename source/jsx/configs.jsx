@@ -9,8 +9,8 @@ define([], function() {
     var local = {
         env: 'local',
         Skylink: {
-            apiMCUKey: '7bcba74c-ee42-4fb7-ba17-94a9edb3c1bf',
-            apiNoMCUKey: '7e31b061-71e6-4dd7-bd55-516579973930'
+            apiMCUKey: '8ed5ad9b-80b3-48c7-a1e1-02c734f26ce1',
+            apiNoMCUKey: '8ed5ad9b-80b3-48c7-a1e1-02c734f26ce1'
         },
         maxUsers: 5
     };
@@ -18,8 +18,8 @@ define([], function() {
     var dev = {
         env: 'dev',
         Skylink: {
-            apiMCUKey: '7bcba74c-ee42-4fb7-ba17-94a9edb3c1bf',
-            apiNoMCUKey: '7e31b061-71e6-4dd7-bd55-516579973930'
+            apiMCUKey: '8ed5ad9b-80b3-48c7-a1e1-02c734f26ce1',
+            apiNoMCUKey: '8ed5ad9b-80b3-48c7-a1e1-02c734f26ce1'
         },
         maxUsers: 5
     };
@@ -27,14 +27,14 @@ define([], function() {
     var prod = {
         env: 'prod',
         Skylink: {
-            apiMCUKey: '7bcba74c-ee42-4fb7-ba17-94a9edb3c1bf',
-            apiNoMCUKey: '7e31b061-71e6-4dd7-bd55-516579973930'
+            apiMCUKey: '8ed5ad9b-80b3-48c7-a1e1-02c734f26ce1',
+            apiNoMCUKey: '8ed5ad9b-80b3-48c7-a1e1-02c734f26ce1'
         },
         maxUsers: 5
     };
 
-    return location.host === 'getaroom.io' ? prod : (
-            location.host === 'dev.getaroom.io' ? dev : local
+    return location.host === '130.211.185.224' ? prod : (
+            location.host === '130.211.185.224' ? dev : local
         );
 
 });

@@ -51,7 +51,7 @@ define([
         componentWillMount: function() {
             var self = this;
 
-            //Skylink.setDebugMode(true);
+            Skylink.setDebugMode(true);
             Skylink.setLogLevel(Skylink.LOG_LEVEL.DEBUG);
 
             Skylink.on('readyStateChange', function(state) {
