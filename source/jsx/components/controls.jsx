@@ -31,8 +31,10 @@ define([
             room = room + Utils.uuid(6);
 
             var selectedRoomName = document.getElementById('roomName').value;
-	    if(selectedRoomName !== null || selectedRoomName !== undefined || selectedRoomName !== ""){
+	        if(selectedRoomName !== null || selectedRoomName !== undefined || selectedRoomName !== ""){
                 room = selectedRoomName;
+            }else{
+                alert("You must enter a room name to continue.");
             }
 
             Router.setRoute('/' + room.replace(/ /g,''));
