@@ -5,7 +5,7 @@
 @import 'mixins/loader'
 
 color1 = #1abc9c
-color2 = #3498db
+color2 = #ff688b
 color3 = #ff688b
 color4 = rgba(191,255,0,0.2)
 
@@ -484,6 +484,8 @@ body > a {
         left 30%
         top 35%
         border-radius 400px
+        background linear-gradient(top left, color1 0%, color2 100%)
+        animation move1 30s linear infinite
 
     &:before
         display block
