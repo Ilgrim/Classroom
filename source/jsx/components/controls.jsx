@@ -108,7 +108,6 @@ define([
                 );
 	                res.push(
                     <div className="link">
-                        <p>Room Name</p>
                         <input name="roomName" id="roomName" type="text" placeholder="Enter Your Room Name Here." />
                     </div>
                     );
