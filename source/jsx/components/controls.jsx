@@ -31,13 +31,12 @@ define([
             room = room + Utils.uuid(6);
 
             var selectedRoomName = document.getElementById('roomName').value;
-	        if(selectedRoomName !== null || selectedRoomName !== undefined || selectedRoomName !== ""){
+	        if(selectedRoomName !== "" && selectedRoomName !== "Enter Your Room Name Here."){
                 room = selectedRoomName;
+                Router.setRoute('/' + room.replace(/ /g,''))
             }else{
                 alert("You must enter a room name to continue.");
             }
-
-            Router.setRoute('/' + room.replace(/ /g,''));
         },
         handleLeaveRoom: function() {
             Skylink.leaveRoom();
